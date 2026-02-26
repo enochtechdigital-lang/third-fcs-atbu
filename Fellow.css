@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background: #f9f9f9;
+}
+
+/* Header */
+.header {
+  background: #0a3d2c;
+  
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.img {
+  width: 30px;
+  height: 40px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #145c42;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #1fa67a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: #0a3d2c;
+}
+
+.light {
+  background: #f1f7f4;
+}
+
+
+.gallery {
+  display: grid;
+  gap: 30px;
+}
+
+.work-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.work-card img {
+  width: 100%;
+  display: block;
+}
+
+.work-card:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  background: #e9f5f1;
+  padding: 20px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a3d2c;
+  color: white;
+}
+
+/* Mobile First Responsive */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0a3d2c;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
